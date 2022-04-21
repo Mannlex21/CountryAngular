@@ -1,0 +1,27 @@
+:host ::ng-deep .mat-form-field-flex {
+    background: rgb(245, 245, 245);
+  }
+
+:host ::ng-deep .mat-form-field-label {
+    color: black;
+}
+
+:host ::ng-deep .mat-grid-tile {
+    /* background: lightblue; */
+}
+
+.country-content {
+    height: 100%;
+width: 100%;
+}
+
+:host ::ng-deep .mat-grid-tile-content{
+    /* position: relative; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden */
+}
+:host ::ng-deep .mat-grid-tile-content img {
+   background-size: cover;
+}
