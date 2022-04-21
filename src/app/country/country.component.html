@@ -1,0 +1,35 @@
+<div class="content" role="main">
+  <form class="example-form">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Search Country</mat-label>
+      <input (keyup)="searchCountry($event)" matInput placeholder="Example: Uruguay" id="inputCountry" name="inputCountry" #inputCountry>
+    </mat-form-field>
+  </form>
+  <div class="country-content">
+    <mat-grid-list [cols]="columns" rowHeight="200px" style="padding:10px" (window:resize)="onResize($event)">
+      
+      <mat-grid-tile class="country-tile tp-box" *ngFor="let item of countries;let indice=index">
+        <mat-card class="example-card">
+          <mat-card-title-group>
+            <mat-card-title>{{item.name.common}}</mat-card-title>
+            <mat-card-subtitle>{{item.name.official}}</mat-card-subtitle>
+            <img class="flag-image" src="{{item.flags.png}}">
+          </mat-card-title-group>
+          <mat-card-content>
+            <label>Language: </label>
+            <ul class="languages">
+              <li *ngFor="let o of item.languages| keyvalue"> {{ o.value }}</li>
+            </ul>
+          </mat-card-content>
+          <a (click)="goToLink(item.maps.googleMaps)">
+            <mat-icon class="map-icon" aria-hidden="false" aria-label="Example home icon" >map</mat-icon>
+          </a>
+          
+          <a (click)="openDialog(item)">
+            <mat-icon class="info-icon" aria-hidden="false" aria-label="Example home icon" >info</mat-icon>
+          </a>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+</div>

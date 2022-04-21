@@ -1,0 +1,37 @@
+<div class="row content-info">
+    <div class="col-sm block">
+        <label>Oficial name: <span>{{data.country.name.official}}</span></label>
+        <label>Demonym: <span>{{data.country.demonyms.eng.f}}</span></label>
+        <label>Region: {{data.country.region}}</label>
+        <label>Subregion: {{data.country.subregion}}</label>
+        <div>
+            <label>Capital:</label>
+            <ul class="languages">
+                <li *ngFor="let item of data.country.capital"> {{ item }}</li>
+            </ul>
+        </div>
+        <div>
+            <label>Currencies:</label>
+            <ul class="languages">
+                <li *ngFor="let item of data.country.currencies | keyvalue"> {{ item.value.name }}</li>
+              </ul>
+        </div>
+        
+    </div>
+    <div class="col-sm block">
+        <label>Population: <span>{{data.country.population}}</span></label>
+        <label>Status: <span>{{data.country.status}}</span></label>
+        <div>
+            <label>Continents:</label>
+            <ul class="languages">
+                <li *ngFor="let item of data.country.continents"> {{ item }}</li>
+            </ul>
+        </div>
+        <div>
+            <label>Time Zones:</label>
+            <ul class="languages">
+                <li *ngFor="let item of data.country.timezones"> {{ item }}</li>
+            </ul>
+        </div>
+    </div>
+  </div>

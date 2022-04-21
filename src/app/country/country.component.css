@@ -1,0 +1,84 @@
+:host {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    width: 100%;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 8px 0;
+  }
+
+  p {
+    margin: 0;
+  }
+  body{
+      width: 100%;
+      height: 100%;
+  }
+
+  .content {
+    display: flex;
+    margin: 15px auto;
+    padding: 0 16px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+ 
+:host ::ng-deep .mat-form-field-flex {
+    background: rgb(245, 245, 245);
+  }
+
+:host ::ng-deep .mat-form-field-label {
+    color: black;
+}
+:host ::ng-deep .mat-input-element::placeholder {
+    color: black;
+}
+
+.country-content {
+    height: 100%;
+    width: 100%;
+}
+
+.example-card {
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    max-height: 180px;
+}
+.flag-image{
+    object-fit: cover;
+    width: 100px;
+    height: 67px;
+}
+
+.languages{
+    margin: 0;
+}
+
+.info-icon{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: azure;
+    cursor: pointer;
+}
+
+.map-icon{
+    position: absolute;
+    bottom: 20px;
+    right: 50px;
+    color: azure;
+    cursor: pointer;
+}
